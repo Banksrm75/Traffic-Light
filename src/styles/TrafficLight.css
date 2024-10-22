@@ -2,7 +2,7 @@
     width: 20px;
     height: 90px;
     background-color: black;
-    margin: auto;
+    margin-left: 55%;
 }
 
 .traffic-light-body {
@@ -12,6 +12,7 @@
     margin: auto;
     border-radius: 15px;
     padding: 10px;
+    margin-left: 50%;
 }
 
 .traffic-light-body div {
@@ -38,4 +39,10 @@
 
 .selected {
     box-shadow: 0px 0px 50px whitesmoke;
+}
+
+.changeLight {
+    margin-top: 20px;
+    margin-left: 50%;
+
 }
