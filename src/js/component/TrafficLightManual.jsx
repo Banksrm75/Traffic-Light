@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import '../../styles/TrafficLight.css' 
 
-const TrafficLight = () => {
+const TrafficLightManual = () => {
     const [selectedColor, setSelectedColor] = useState("red");
-    const [isAuto, setIsAuto] = useState(true);
 
     function nextColor(currentColor) {
         if (currentColor === "green") {
@@ -16,17 +15,6 @@ const TrafficLight = () => {
             setSelectedColor("green")
         }
     }
-
-    const changeLightAutomatically = () => {
-        if (isAuto) {
-          nextColor(selectedColor)  
-        }
-    }
-
-    setTimeout(() => {
-        changeLightAutomatically()
-    }, 2000);    
-    
 
     return (
         <>
@@ -41,9 +29,9 @@ const TrafficLight = () => {
                 <div className={selectedColor === "green" ? "green selected" : "green"}></div>
 
             </div>
-
+            <button className='changeLight' onClick={() => {nextColor(selectedColor)}}>Change the Light</button>
         </>
     )
 }
 
-export default TrafficLight
+export default TrafficLightManual
